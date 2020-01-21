@@ -33,25 +33,25 @@ the `vets-api` directory, run `./bin/setup-osx && source ~/.bash_profile && cd
     console output. Make sure to follow those too.
 2. Install Bundler to manage dependencies
    - `gem install bundler`
-<script id="asciicast-FvrKFQEn7LPU2uJWEwKs4qWdD" src="https://asciinema.org/a/FvrKFQEn7LPU2uJWEwKs4qWdD.js" data-speed="3" async></script>
+   - <script id="asciicast-FvrKFQEn7LPU2uJWEwKs4qWdD" src="https://asciinema.org/a/FvrKFQEn7LPU2uJWEwKs4qWdD.js" data-speed="3" async></script>
 3. Install Postgres and enable on startup
    - `brew install postgres`
    - `brew services start postgres`
-<script id="asciicast-qP6m9dJO12VUQNCRlPhSp0Gxv" src="https://asciinema.org/a/qP6m9dJO12VUQNCRlPhSp0Gxv.js" data-speed="20" async></script>
+   - <script id="asciicast-qP6m9dJO12VUQNCRlPhSp0Gxv" src="https://asciinema.org/a/qP6m9dJO12VUQNCRlPhSp0Gxv.js" data-speed="20" async></script>
 4. Install PostGIS
    - `brew install postgis`
-<script id="asciicast-CNXY78BJsmWVCu1h7D3U4Y0dI" src="https://asciinema.org/a/CNXY78BJsmWVCu1h7D3U4Y0dI.js" data-speed="30" async></script>
+   - <script id="asciicast-CNXY78BJsmWVCu1h7D3U4Y0dI" src="https://asciinema.org/a/CNXY78BJsmWVCu1h7D3U4Y0dI.js" data-speed="30" async></script>
 5. Install Redis
    - `brew install redis`
    - Follow post-install instructions to enable Redis on startup. Otherwise,
     launch it manually with `brew services start redis`.
-<script id="asciicast-UaSV2iPYXBP1YpFV9MrGPJgfp" src="https://asciinema.org/a/UaSV2iPYXBP1YpFV9MrGPJgfp.js" data-speed="3" async></script>
+   - <script id="asciicast-UaSV2iPYXBP1YpFV9MrGPJgfp" src="https://asciinema.org/a/UaSV2iPYXBP1YpFV9MrGPJgfp.js" data-speed="3" async></script>
 6. Install ImageMagick
    - `brew install imagemagick`
-<script id="asciicast-wt0PV8fC7u9k8dWnyMc8kvPdz" src="https://asciinema.org/a/wt0PV8fC7u9k8dWnyMc8kvPdz.js" data-speed="15" async></script>
+   - <script id="asciicast-wt0PV8fC7u9k8dWnyMc8kvPdz" src="https://asciinema.org/a/wt0PV8fC7u9k8dWnyMc8kvPdz.js" data-speed="15" async></script>
 7. Install Poppler
    -  `brew install poppler`
-<script id="asciicast-bglBU8sebtYUSHLFEqN0jGfdS" src="https://asciinema.org/a/bglBU8sebtYUSHLFEqN0jGfdS.js" data-speed="15" async></script>
+   - <script id="asciicast-bglBU8sebtYUSHLFEqN0jGfdS" src="https://asciinema.org/a/bglBU8sebtYUSHLFEqN0jGfdS.js" data-speed="15" async></script>
 8. Install ClamAV
   - `brew install clamav`
   - Take note of the the post-install instructions "To finish installation & run clamav you will need to edit the example conf files at `${conf_files_dir}`", which will vary depending on your homebrew installation
@@ -61,13 +61,13 @@ the `vets-api` directory, run `./bin/setup-osx && source ~/.bash_profile && cd
     - `echo "LocalSocket ${conf_files_dir}" > clamd.conf` 
     - `echo "DatabaseMirror database.clamav.net" > freshclam.conf`
     - `freshclam -v`
-<script id="asciicast-bfO1404XqTKNz6RPSUkUmrY5A" src="https://asciinema.org/a/bfO1404XqTKNz6RPSUkUmrY5A.js" data-speed="15" async></script>
+    - <script id="asciicast-bfO1404XqTKNz6RPSUkUmrY5A" src="https://asciinema.org/a/bfO1404XqTKNz6RPSUkUmrY5A.js" data-speed="15" async></script>
 9. Install [pdftk](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/pdftk_server-2.02-mac_osx-10.11-setup.pkg)
 10. Install gem dependencies: `cd vets-api; bundle install`
-<script id="asciicast-MO9y7K9l05hfIHJydPIJ471kg" src="https://asciinema.org/a/MO9y7K9l05hfIHJydPIJ471kg.js" data-speed="3" async></script>
+   - <script id="asciicast-MO9y7K9l05hfIHJydPIJ471kg" src="https://asciinema.org/a/MO9y7K9l05hfIHJydPIJ471kg.js" data-speed="3" async></script>
    - More information about installing *with* Sidekiq Enterprise as well as our credentials are on the internal system here: https://github.com/department-of-veterans-affairs/vets-api#authentication-required-for-enterprisecontribsyscom
 11. Install overcommit `overcommit --install --sign`
-<script id="asciicast-VzNNnYm4OkBvWYy3EJvm6bDVs" src="https://asciinema.org/a/VzNNnYm4OkBvWYy3EJvm6bDVs.js" data-speed="3" async></script>
+   - <script id="asciicast-VzNNnYm4OkBvWYy3EJvm6bDVs" src="https://asciinema.org/a/VzNNnYm4OkBvWYy3EJvm6bDVs.js" data-speed="3" async></script>
 12. Setup localhost certificates / keys:
    - Create certs directory within config:  `mkdir ./config/certs`
    - Copy the [certificate][certificate] to `./config/certs/vetsgov-localhost.crt`
@@ -78,10 +78,9 @@ the `vets-api` directory, run `./bin/setup-osx && source ~/.bash_profile && cd
    - `touch ./config/certs/vetsgov-localhost.key`
    
    - *NOTE:* using `touch` to create blank cert and key files means that local authentication with IDme will not work
-   
+   - <script id="asciicast-dReuUt7pIMEjMhZ88QIud0SG4" src="https://asciinema.org/a/dReuUt7pIMEjMhZ88QIud0SG4.js" data-speed="3" async></script>
    [certificate]: https://github.com/department-of-veterans-affairs/vets.gov-team/blob/master/Products/Identity/Login/IDme/development-certificates/vetsgov-localhost.crt
    [key]: https://github.com/department-of-veterans-affairs/vets.gov-team/blob/master/Products/Identity/Login/IDme/development-certificates/vetsgov-localhost.key
-<script id="asciicast-dReuUt7pIMEjMhZ88QIud0SG4" src="https://asciinema.org/a/dReuUt7pIMEjMhZ88QIud0SG4.js" data-speed="3" async></script>
 13. Create dev database: `bundle exec rake db:setup`
 14. Go to the file `config/settings/development.yml` in your local vets-api. Switch the commented out lines pertaining to the cache_dir: uncomment out line 14 (what you use for running the app via Rails), and comment out line 15 (what you use for running the app via Docker).
 15. Make sure you have the [vets-api-mockdata](https://github.com/department-of-veterans-affairs/vets-api-mockdata) repo locally installed, preferably in a parallel directory to `vets-api`.

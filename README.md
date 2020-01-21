@@ -34,23 +34,48 @@ the `vets-api` directory, run `./bin/setup-osx && source ~/.bash_profile && cd
 2. Install Bundler to manage dependencies
    - `gem install bundler`
    
-<a href="https://asciinema.org/a/FvrKFQEn7LPU2uJWEwKs4qWdD?speed=3" rel="nofollow" target="_blank">
-<img src="https://asciinema.org/a/FvrKFQEn7LPU2uJWEwKs4qWdD.svg" alt="asciicast" style="max-width:100%;">
-</a>
+<div id="install-bundler">
+<script id="asciicast-FvrKFQEn7LPU2uJWEwKs4qWdD" src="https://asciinema.org/a/FvrKFQEn7LPU2uJWEwKs4qWdD.js" data-speed="3" async></script>
+</div>
 
 3. Install Postgres and enable on startup
    - `brew install postgres`
    - `brew services start postgres`
+
+<div id="install-postgres">
+<script id="asciicast-qP6m9dJO12VUQNCRlPhSp0Gxv" src="https://asciinema.org/a/qP6m9dJO12VUQNCRlPhSp0Gxv.js" data-speed="20" async></script>
+</div>
+
 4. Install PostGIS
    - `brew install postgis`
+
+<div id="install-postgis">
+<script id="asciicast-CNXY78BJsmWVCu1h7D3U4Y0dI" src="https://asciinema.org/a/CNXY78BJsmWVCu1h7D3U4Y0dI.js" data-speed="30" async></script>
+</div>
+
 5. Install Redis
    - `brew install redis`
    - Follow post-install instructions to enable Redis on startup. Otherwise,
     launch it manually with `brew services start redis`.
+
+<div id="install-redis">
+<script id="asciicast-UaSV2iPYXBP1YpFV9MrGPJgfp" src="https://asciinema.org/a/UaSV2iPYXBP1YpFV9MrGPJgfp.js" data-speed="3" async></script>
+</div>
+
 6. Install ImageMagick
    - `brew install imagemagick`
+
+<div id="install-imagemagick">
+<script id="asciicast-wt0PV8fC7u9k8dWnyMc8kvPdz" src="https://asciinema.org/a/wt0PV8fC7u9k8dWnyMc8kvPdz.js" data-speed="15" async></script>
+</div>
+
 7. Install Poppler
    -  `brew install poppler`
+
+<div id="install-poppler">
+<script id="asciicast-bglBU8sebtYUSHLFEqN0jGfdS" src="https://asciinema.org/a/bglBU8sebtYUSHLFEqN0jGfdS.js" data-speed="15" async></script>
+</div>
+
 8. Install ClamAV
 
   - `brew install clamav`
@@ -62,12 +87,25 @@ the `vets-api` directory, run `./bin/setup-osx && source ~/.bash_profile && cd
     - `echo "DatabaseMirror database.clamav.net" > freshclam.conf`
     - `freshclam -v`
 
+<div id="install-clamav">
+<script id="asciicast-bfO1404XqTKNz6RPSUkUmrY5A" src="https://asciinema.org/a/bfO1404XqTKNz6RPSUkUmrY5A.js" data-speed="15" async></script>
+</div>
+
 9. Install [pdftk](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/pdftk_server-2.02-mac_osx-10.11-setup.pkg)
 10. Install gem dependencies: `cd vets-api; bundle install`
+
+<div id="install-gem-dependencies">
+<script id="asciicast-MO9y7K9l05hfIHJydPIJ471kg" src="https://asciinema.org/a/MO9y7K9l05hfIHJydPIJ471kg.js" data-speed="3" async></script>
+</div>
 
    - More information about installing *with* Sidekiq Enterprise as well as our credentials are on the internal system here: https://github.com/department-of-veterans-affairs/vets-api#authentication-required-for-enterprisecontribsyscom
 
 11. Install overcommit `overcommit --install --sign`
+
+<div id="install-overcommit">
+<script id="asciicast-VzNNnYm4OkBvWYy3EJvm6bDVs" src="https://asciinema.org/a/VzNNnYm4OkBvWYy3EJvm6bDVs.js" data-speed="3" async></script>
+</div>
+
 12. Setup localhost certificates / keys:
    - Create certs directory within config:  `mkdir ./config/certs`
    - Copy the [certificate][certificate] to `./config/certs/vetsgov-localhost.crt`
@@ -81,6 +119,10 @@ the `vets-api` directory, run `./bin/setup-osx && source ~/.bash_profile && cd
    
    [certificate]: https://github.com/department-of-veterans-affairs/vets.gov-team/blob/master/Products/Identity/Login/IDme/development-certificates/vetsgov-localhost.crt
    [key]: https://github.com/department-of-veterans-affairs/vets.gov-team/blob/master/Products/Identity/Login/IDme/development-certificates/vetsgov-localhost.key
+
+<div id="setup-localhost-certs-keys">
+<script id="asciicast-dReuUt7pIMEjMhZ88QIud0SG4" src="https://asciinema.org/a/dReuUt7pIMEjMhZ88QIud0SG4.js" data-speed="3" async></script>
+</div>
 
 13. Create dev database: `bundle exec rake db:setup`
 14. Go to the file `config/settings/development.yml` in your local vets-api. Switch the commented out lines pertaining to the cache_dir: uncomment out line 14 (what you use for running the app via Rails), and comment out line 15 (what you use for running the app via Docker).
